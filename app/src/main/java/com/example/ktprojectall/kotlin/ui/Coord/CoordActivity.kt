@@ -4,6 +4,7 @@ import android.app.Activity
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,9 @@ class CoordActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_coord)
-
+        Looper.getMainLooper().setMessageLogging { msg ->
+            Log.e("ajiang", msg)
+        }
         tabLayout = findViewById(R.id.tab_layout)
         val viewPager = findViewById<ViewPager>(R.id.vp2)
         tabLayout?.setupWithViewPager(viewPager)
