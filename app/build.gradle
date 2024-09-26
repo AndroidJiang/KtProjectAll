@@ -41,5 +41,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     api 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "androidx.appcompat:appcompat:1.3.1"  //测试发现该版本或者1.4.0 onpause都会延迟执行
+    implementation 'com.google.code.gson:gson:2.8.9'
 
 }

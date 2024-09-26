@@ -18,6 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".kotlin.ui.provider.ProviderActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".kotlin.ui.menu.CircleLayoutActivity"
+            android:theme="@style/AppTheme"/>
+
     </application>
 
 </manifest>
