@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior=".kotlin.ui.Coord.AppBarLayoutBehavior">
-
+<!--默认消费insets，随便写个布局fitSystem=true也会触发-->
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/main.collapsing"
             android:layout_width="match_parent"
@@ -39,18 +39,18 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/materialup.tabs"
-            android:layout_width="fill_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:tabIndicatorColor="?android:attr/textColorPrimaryInverse"
-            app:tabIndicatorHeight="4dp"
-            app:tabSelectedTextColor="?android:attr/textColorPrimaryInverse" />
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/materialup.tabs"-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            app:tabIndicatorColor="?android:attr/textColorPrimaryInverse"-->
+<!--            app:tabIndicatorHeight="4dp"-->
+<!--            app:tabSelectedTextColor="?android:attr/textColorPrimaryInverse" />-->
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/materialup.viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/materialup.viewpager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
 
     </LinearLayout>
 

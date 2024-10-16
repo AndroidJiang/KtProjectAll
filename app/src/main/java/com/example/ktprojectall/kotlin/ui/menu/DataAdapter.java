@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ktprojectall.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Dajavu on 25/10/2017.
  */
@@ -17,20 +20,15 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public interface OnItemClickListener {
         void onItemClick(View v, int pos);
     }
+    List<Item> items = new ArrayList<>();
+    public DataAdapter(){
 
-    private int[] images = {R.mipmap.icon_home_page_rank_1
-            , R.mipmap.icon_home_page_rank_2
-            , R.mipmap.icon_home_page_rank_3
-            ,
-            R.mipmap.icon_home_page_rank_4
-            , R.mipmap.icon_home_page_rank_5
-            , R.mipmap.icon_home_page_rank_6
-            , R.mipmap.icon_home_page_rank_7
-            ,
-            R.mipmap.icon_home_page_rank_8
-            , R.mipmap.icon_home_page_rank_9
-            , R.mipmap.icon_home_page_rank_10
-    };
+    }
+    public DataAdapter(List<Item> items){
+        this.items = items;
+    }
+
+
 
     public OnItemClickListener onItemClickListener;
 
@@ -41,13 +39,14 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(DataAdapter.ViewHolder holder, int position) {
-        holder.imageView.setImageResource(images[position]);
+        holder.imageView.setImageResource(items.get(position).img);
         holder.imageView.setTag(position);
+
     }
 
     @Override
     public int getItemCount() {
-        return images.length;
+        return items.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

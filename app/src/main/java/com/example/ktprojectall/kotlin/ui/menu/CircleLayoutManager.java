@@ -1,8 +1,10 @@
 package com.example.ktprojectall.kotlin.ui.menu;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 
+import com.example.ktprojectall.R;
 
 
 /**
@@ -209,25 +211,29 @@ public class CircleLayoutManager extends ViewPagerLayoutManager {
 
     @Override
     protected void setItemViewProperty(View itemView, float targetOffset) {
-        switch (gravity) {
-            case RIGHT:
-            case TOP:
-                if (flipRotate) {
-                    itemView.setRotation(targetOffset);
-                } else {
-                    itemView.setRotation(360 - targetOffset);
-                }
-                break;
-            case LEFT:
-            case BOTTOM:
-            default:
-                if (flipRotate) {
-                    itemView.setRotation(360 - targetOffset);
-                } else {
-                    itemView.setRotation(targetOffset);
-                }
-                break;
-        }
+        Log.e("ajiang",itemView+","+targetOffset+"!!!");
+
+//        itemView.setRotation(targetOffset);
+//        itemView.findViewById(R.id.bg).setPadding(0, (int) targetOffset,0, (int) targetOffset);
+//        switch (gravity) {
+//            case RIGHT:
+//            case TOP:
+//                if (flipRotate) {
+//                    itemView.setRotation(targetOffset);
+//                } else {
+//                    itemView.setRotation(360 - targetOffset);
+//                }
+//                break;
+//            case LEFT:
+//            case BOTTOM:
+//            default:
+//                if (flipRotate) {
+//                    itemView.setRotation(360 - targetOffset);
+//                } else {
+//                    itemView.setRotation(targetOffset);
+//                }
+//                break;
+//        }
     }
 
     @Override

@@ -17,6 +17,9 @@ public class CircleLayoutActivity extends BaseActivity<CircleLayoutManager, Circ
             @Override
             public void onPageSelected(int position) {
                 Toast.makeText(CircleLayoutActivity.this, "选中"+position, Toast.LENGTH_SHORT).show();
+                resetSelect();
+                items.get(position).select = 1;
+                dataAdapter.notifyDataSetChanged();
             }
 
             @Override

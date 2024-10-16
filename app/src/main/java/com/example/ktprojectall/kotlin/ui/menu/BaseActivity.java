@@ -15,6 +15,11 @@ import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 
 import com.example.ktprojectall.R;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 /**
  * Created by Dajavu on 26/10/2017.
@@ -25,11 +30,25 @@ public abstract class BaseActivity<V extends LinearLayoutManager, S extends Sett
     public RecyclerView recyclerView;
     private V viewPagerLayoutManager;
     private S settingPopUpWindow;
+    protected DataAdapter dataAdapter;
 
     protected abstract V createLayoutManager();
 
     protected abstract S createSettingPopUpWindow();
-
+    private int[] images = {R.mipmap.icon_home_page_rank_1
+            , R.mipmap.icon_home_page_rank_2
+            , R.mipmap.icon_home_page_rank_3
+            ,
+            R.mipmap.icon_home_page_rank_4
+            , R.mipmap.icon_home_page_rank_5
+            , R.mipmap.icon_home_page_rank_6
+            , R.mipmap.icon_home_page_rank_7
+            ,
+            R.mipmap.icon_home_page_rank_8
+            , R.mipmap.icon_home_page_rank_9
+            , R.mipmap.icon_home_page_rank_10
+    };
+    protected List<Item> items = new ArrayList<>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +56,10 @@ public abstract class BaseActivity<V extends LinearLayoutManager, S extends Sett
         setTitle(getIntent().getCharSequenceExtra("标题"));
         recyclerView = findViewById(R.id.recycler);
         viewPagerLayoutManager = createLayoutManager();
-        DataAdapter dataAdapter = new DataAdapter();
+        for (int i = 0; i < images.length; i++) {
+            items.add(new Item(images[i],0));
+        }
+        dataAdapter = new DataAdapter(items);
         dataAdapter.setOnItemClickListener(new DataAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int pos) {
@@ -97,5 +119,10 @@ public abstract class BaseActivity<V extends LinearLayoutManager, S extends Sett
         super.onDestroy();
         if (settingPopUpWindow != null && settingPopUpWindow.isShowing())
             settingPopUpWindow.dismiss();
+    }
+    protected void resetSelect(){
+        for (Item item : items) {
+            item.select = 0;
+        }
     }
 }

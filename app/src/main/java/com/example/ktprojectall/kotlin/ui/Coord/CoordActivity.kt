@@ -123,4 +123,5 @@ class CoordActivity : AppCompatActivity() {
         } catch (e: Exception) {
         }
     }
+
 }

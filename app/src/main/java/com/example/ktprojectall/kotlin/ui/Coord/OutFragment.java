@@ -52,15 +52,15 @@ public class OutFragment extends Fragment
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_out, container, false);
 
-        TabLayout tabLayout = view.findViewById(R.id.materialup_tabs);
-        ViewPager viewPager = view.findViewById(R.id.materialup_viewpager);
-        AppBarLayout appbarLayout = view.findViewById(R.id.materialup_appbar);
+//        TabLayout tabLayout = view.findViewById(R.id.materialup_tabs);
+//        ViewPager viewPager = view.findViewById(R.id.materialup_viewpager);
+//        AppBarLayout appbarLayout = view.findViewById(R.id.materialup_appbar);
 
-        appbarLayout.addOnOffsetChangedListener(this);
-        mMaxScrollSize = appbarLayout.getTotalScrollRange();
+//        appbarLayout.addOnOffsetChangedListener(this);
+//        mMaxScrollSize = appbarLayout.getTotalScrollRange();
 
-        viewPager.setAdapter(new TabsAdapter(getChildFragmentManager()));
-        tabLayout.setupWithViewPager(viewPager);
+//        viewPager.setAdapter(new TabsAdapter(getChildFragmentManager()));
+//        tabLayout.setupWithViewPager(viewPager);
 
         return view;
     }
