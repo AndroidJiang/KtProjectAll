@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.ktprojectall.kotlin.ui.Coord;
+package com.example.ktprojectall.kotlin.ui.coord;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -8,25 +8,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/MiguGameAppTheme" >
-        <activity android:name=".kotlin.ui.Coord.CoordActivity" />
-        <activity android:name=".kotlin.ui.FirstActivity"
-            android:exported="true"
-            >
+        android:theme="@style/MiguGameAppTheme">
+        <activity
+            android:name=".kotlin.ui.scrollconflict.ScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/MiguGameAppTheme.NoActionBar" />
+        <activity android:name=".kotlin.ui.coord.CoordActivity" />
+        <activity
+            android:name=".kotlin.ui.FirstActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".kotlin.ui.provider.ProviderActivity"
-            >
+        <activity android:name=".kotlin.ui.provider.ProviderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".kotlin.ui.menu.CircleLayoutActivity"
-            android:theme="@style/AppTheme"/>
-
+        <activity
+            android:name=".kotlin.ui.menu.CircleLayoutActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".kotlin.ui.janks.JanksActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

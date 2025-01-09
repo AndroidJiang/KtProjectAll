@@ -1,4 +1,4 @@
-package com.example.ktprojectall.kotlin.ui.Coord;
+package com.example.ktprojectall.kotlin.ui.coord;
 
 import android.content.Context;
 import android.util.AttributeSet;

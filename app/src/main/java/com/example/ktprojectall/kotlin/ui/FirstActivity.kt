@@ -6,8 +6,10 @@ import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ktprojectall.R
-import com.example.ktprojectall.kotlin.ui.Coord.CoordActivity
+import com.example.ktprojectall.kotlin.ui.coord.CoordActivity
+import com.example.ktprojectall.kotlin.ui.janks.JanksActivity
 import com.example.ktprojectall.kotlin.ui.menu.CircleLayoutActivity
+import com.example.ktprojectall.kotlin.ui.scrollconflict.ScrollingActivity
 
 
 class FirstActivity : AppCompatActivity() {
@@ -17,6 +19,8 @@ class FirstActivity : AppCompatActivity() {
 
         val toggleButton = findViewById<Button>(R.id.button1)
         val toggleButton2 = findViewById<Button>(R.id.button2)
+        val toggleButton3 = findViewById<Button>(R.id.button3)
+        val toggleButton4 = findViewById<Button>(R.id.button4)
         toggleButton.setOnClickListener {
 
             startActivity(Intent(this, CoordActivity::class.java))
@@ -39,6 +43,13 @@ class FirstActivity : AppCompatActivity() {
         toggleButton2.setOnClickListener {             startActivity(Intent(this, CircleLayoutActivity::class.java))
         }
 
+
+        toggleButton3.setOnClickListener {
+            startActivity(Intent(this, JanksActivity::class.java))
+        }
+        toggleButton4.setOnClickListener {
+            startActivity(Intent(this, ScrollingActivity::class.java))
+        }
     }
 
     override fun onPause() {
